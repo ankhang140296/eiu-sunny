@@ -1,0 +1,95 @@
+.btn--rectangle{
+    line-height: 16px;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #fbbd61, #ec7532);
+    background-image: linear-gradient(to right, #fbbd61, #ec7532);
+    color: #fff;
+    border:none !important;
+    &:hover{
+        background-image: -webkit-linear-gradient(right, #fbbd61, #ec7532);
+    background-image: linear-gradient(to left, #fbbd61, #ec7532);
+    color: #fff;
+    }
+    font-size: 1.2rem;
+    padding: 0.5rem 0.5rem ;
+    
+}
+.btn--transparent{
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    color: #ec7532;
+    border:2px solid #ec7532;
+    background: 0 0;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    padding: 12px 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:5px;
+    &::before{
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        left: -15px;
+        width: 0;
+        height: 100%;
+        content: '';
+        -webkit-transition: .4s;
+        transition: .4s;
+        -webkit-transform: skewX(30deg);
+        -ms-transform: skewX(30deg);
+        transform: skewX(30deg);
+        background: #ec7532;
+    }
+    &:hover{
+        color: #fff;
+        &::before {
+            z-index: -1;
+            width: 140%;
+        }
+    }
+}
+.btn--ellipse{
+    position: relative;
+    overflow: hidden;
+    border: none !important;
+    background-image: linear-gradient(to right,#fbbd61,#ec7532);
+    border-radius: 30px !important;
+    color: $color-white;
+    padding: 12px 24px;
+    
+    i,span{
+        color: $color-white;
+        position: relative;
+z-index: 1;
+
+    }
+    i{
+        padding-right: 5px;
+    }
+    &::before{
+        position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -15px;
+    width: 0;
+    height: 100%;
+    content: '';
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-transform: skewX(30deg);
+    -ms-transform: skewX(30deg);
+    transform: skewX(30deg);
+    background: #ec7532;
+    }
+    &:hover{
+        &::before {
+            width: 140%;
+        }
+    }
+}
+

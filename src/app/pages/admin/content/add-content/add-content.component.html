@@ -1,0 +1,118 @@
+<!-- <div class="jumbotron">
+  <div class="container mt-3">
+    <h2>New Content</h2>
+    <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+       Title 
+      <div class="form-group">
+        <label for="contactFormTitle">Title</label>
+        <input class="form-control" type="text" formControlName="contactFormTitle" class="form-control"
+          mdbInputDirective [(ngModel)]="title" [ngClass]="{ 'is-invalid': submitted && f.contactFormTitle.errors }" />
+        <div *ngIf="submitted && f.contactFormTitle.errors" class="col alert alert-danger" role="alert">
+          <div *ngIf="f.contactFormTitle.errors.required">Title is required</div>
+        </div>
+      </div>
+       Description 
+      <div class="form-group">
+        <label for="contactFormDescription">Description</label>
+        <input class="form-control" type="text" id="contactFormDescription" formControlName="contactFormDescription"
+          class="form-control" mdbInputDirective [(ngModel)]="description"
+          [ngClass]="{ 'is-invalid': submitted && f.contactFormDescription.errors }" />
+        <div *ngIf="submitted && f.contactFormDescription.errors" class="col alert alert-danger" role="alert">
+          <div *ngIf="f.contactFormDescription.errors.required">Description is required</div>
+        </div>
+      </div>
+      Content 
+      <div class="form-group">
+          <div formArrayName="contents" *ngFor="let creds of form.controls.contents?.value; let i = index">
+              <ng-container [formGroupName]="i">
+                <input placeholder="Image URL" formControlName="imageURL">
+                <input placeholder="Content" formControlName="content">
+              </ng-container>
+            </div>
+      </div>
+       Writer 
+      <div class="form-group">
+        <label for="contactFormWriter">Writer</label>
+        <input class="form-control" type="text" id="contactFormWriter" formControlName="contactFormWriter"
+          class="form-control" mdbInputDirective [(ngModel)]="writer"
+          [ngClass]="{ 'is-invalid': submitted && f.contactFormWriter.errors }" />
+        <div *ngIf="submitted && f.contactFormWriter.errors" class="col alert alert-danger" role="alert">
+          <div *ngIf="f.contactFormWriter.errors.required">Writer is required</div>
+        </div>
+      </div>
+       Button Submit 
+      <div class="form-group">
+        <button (click)="onSubmit()" type="submit" class="btn btn-primary" mdbWavesEffect>Add
+          <i class="fa fa-paper-plane-o ml-1"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div> -->
+
+<div class="row" style="width: 100%; padding: 0px;">
+  <div class="col-sm-2">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-sm-10">
+    <div class="container p-3">
+      <div class="row">
+        <div class="col-12">
+          <form [formGroup]="form" (submit)="submit()">
+            <div class="card">
+              <h3 class="card-header" style="background-color: cadetblue;color: brown ;text-align: center">Add Article</h3>
+              <div class="card-body">
+                <div class="row">
+                  <div class="form-group col-6">
+                    <label>Title</label>
+                    <input class="form-control" formControlName="title" type="text">
+                    <span class="text-danger"
+                      *ngIf="form.controls['title'].touched && form.controls['title'].hasError('required')">
+                      Title is required! </span>
+                  </div>
+                  <div class="form-group col-6">
+                    <label>Description</label>
+                    <input class="form-control" formControlName="description" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="card-header">Content Information</div>
+              <div class="card-body" formArrayName="contacts">
+                <div class="row">
+                  <div class="col-12" *ngFor="let contact of contactFormGroup.controls; let i = index;">
+                    <div [formGroupName]="i" class="row">
+                      <div class="form-group col-6">
+                        <label>Image URL</label>
+                        <input class="form-control" formControlName="imageURL" type="text">
+                        <span class="text-danger"
+                          *ngIf="getContactsFormGroup(i).controls['imageURL'].touched && getContactsFormGroup(i).controls['imageURL'].hasError('required')">
+                          Image URL is required! </span>
+                      </div>
+                      <div class="form-group col-6">
+                        <label>Content</label>
+                        <textarea class="form-control" formControlName="content" cols="40" rows="5"></textarea>
+                        <span class="text-danger"
+                          *ngIf="getContactsFormGroup(i).controls['content'].touched && getContactsFormGroup(i).controls['content'].hasError('required')">
+                          Content is required! </span>
+                      </div>
+
+                      <div class="form-group col-12 text-right">
+                        <button class="btn btn-danger" type="button" (click)="removeContact(i)"> Remove </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="col-12">
+                  <button class="btn btn-primary m-1" type="button" (click)="addContact()"> Add Content </button>
+                  <button class="btn btn-success m-1" [disabled]="!form.valid" type="submit"> Save Article </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

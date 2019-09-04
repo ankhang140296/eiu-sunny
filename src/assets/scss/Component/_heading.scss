@@ -1,0 +1,26 @@
+.heading--orange{
+    position: relative;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;   
+    margin: 35px 0;
+    color: #ec7532 !important;
+    background-color: transparent;
+    padding: 0 0 20px;
+    &::after {
+        position: absolute;
+        right: auto;
+        bottom: -1px;
+        left: 0;
+        display: block;
+        width: 125px;
+        height: 4px;
+        content: '';
+        -webkit-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        background-image: -webkit-linear-gradient(left, #fbbd61, #ec7532);
+        background-image: linear-gradient(to right, #fbbd61, #ec7532);
+    }
+    
+}

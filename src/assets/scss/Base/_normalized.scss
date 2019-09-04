@@ -1,0 +1,84 @@
+    .carousel-indicators {
+        bottom: 20px;
+        z-index: 1;
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border: 1px solid $color-white;
+        }
+        .active {
+            background-color: $color-orange-dark;
+        }
+    }
+
+    .carousel-inner {
+        .carousel-item {
+            .carousel-caption {
+                bottom: 50%;
+            }
+        }
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .owl-prev {
+        position: absolute;
+        top: 120px;
+        left: -50px;
+        font-size: 80px !important;
+        color: $color-orange-light !important;
+        &:hover {
+            color: $color-orange-dark !important;
+            background: none !important;
+        }
+    }
+
+    .owl-next {
+        position: absolute;
+        top: 120px;
+        right: -50px;
+        font-size: 80px !important;
+        color: $color-orange-light !important;
+        &:hover {
+            color: $color-orange-dark !important;
+            background: none !important;
+        }
+    }
+
+    .movie-pagination /deep/ .ngx-pagination {
+        li {
+            border: 1px solid $color-orange-dark;
+            &:hover {
+                background: $color-orange-dark;
+            }
+            a {
+                color: $color-orange-dark;
+                &:hover {
+                    background: $color-orange-dark;
+                    color: $color-white;
+                }
+            }
+        }
+        .disabled {
+            border: 1px solid #cacaca;
+            &:hover {
+                background: $color-white;
+            }
+        }
+        .current {
+            background: $color-orange-dark;
+            border: 1px solid $color-orange-dark;
+            color: $color-white;
+        }
+    }
+
+    

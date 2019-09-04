@@ -1,0 +1,143 @@
+/*  Billoard  */
+.billboard{
+	width: 100%;
+	background: url('/assets/img/billboard_img.jpg') no-repeat;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	flex: 1;
+    height: 70vh;
+    position: relative;
+}
+
+
+.billboard .caption{
+	margin-top: 50px;
+}
+
+.billboard .caption .cap_title{
+	font-family: 'satellite', arial;
+	font-size: 50px;
+	color:  #ffffff;
+	margin-bottom: 30px;
+}
+
+.billboard .caption .cap_desc{
+	font-family: 'open_regular', arial;
+	font-size: 16px;
+	color: #ffffff;
+	margin-bottom: 60px;	
+}
+
+.billboard .caption a{
+	padding: 15px 80px;
+	background: #4d4d4d;
+	color: #fff;
+	font-family: 'open_semibold', arial;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+}
+
+.billboard .caption a:hover{
+	background: #ffffff;
+	color: #4d4d4d;
+}
+
+
+.billboard .caption a i{
+	width: 17px;
+	height: 5px;
+	display: inline-block;
+	background: url('/assets/img/right_arrow.png') no-repeat;
+	margin: 0 0 4px 6px;
+}
+
+.billboard .caption a:hover i{
+	background: url('/assets/img/right_arrow_black.png') no-repeat;
+}
+
+/* Countdown */
+*{
+    font-family: "montserrat",sans-serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .page{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .col{
+    flex: 1;
+    height: 35vh;
+    position: relative;
+  }
+  /* .countdown-col{
+    background: url(/assets/img/background2.jpg) no-repeat center;
+    background-size: cover;
+  } */
+  .time{
+    color: #fff;
+    text-transform: uppercase;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 100%;
+  }
+  .time span{
+    padding: 0 14px;
+    font-size: 100%;
+  }
+  .time span div{
+    font-size: 40px;
+  }
+  
+  .newsletter{
+    width: 90%;
+  }
+  .newsletter h4{
+    font-style: italic;
+    font-size: 12px;
+  }
+  .newsletter input{
+    display: block;
+    margin: 12px auto;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  .newsletter-btn{
+    background: linear-gradient(125deg,#3498db,#34495e);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .newsletter-btn:hover{
+    opacity: .7;
+  }
+  
+  @media screen and (max-width :900px){
+    .billboard{
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

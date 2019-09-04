@@ -1,0 +1,29 @@
+<div class="title">
+  <h1>HOẠT ĐỘNG</h1>
+</div>
+<div class="row">
+  <div class="col-sm-2 w3-bar-block w3-light-grey w3-card" style="width:130px;">
+    <h5 class="w3-bar-item">Menu</h5>
+    <button [class.active]="tabIndex == 1" class="w3-bar-item w3-button tablink" (click)="openFunction(1, 'maps-run')">COLOR ME RUN</button>
+    <button [class.active]="tabIndex == 2" class="w3-bar-item w3-button tablink" (click)="openFunction(2, 'outdoor-stage')">OUTDOOR STAGE</button>
+    <button [class.active]="tabIndex == 3" class="w3-bar-item w3-button tablink" (click)="openFunction(3, 'food-court')">FOOD COURT</button>
+  </div>
+  <div class="col-sm-8" style="margin-left:100px">
+
+    <div id="maps-run" class="w3-container function" style="display:block">
+      <img width="100%" src="/assets/img/maps/CMR19_Journey-Route.jpg" alt="">
+    </div>
+
+    <div id="outdoor-stage" class="w3-container function" style="display:none">
+      <img width="100%" src="/assets/img/banner/hinh5.jpg" alt="">
+    </div>
+
+    <div id="food-court" class="w3-container function" style="display:none">
+      <h4>Thời gian: 1:00 pm – 8:30 pm</h4>
+      <h5>Địa điểm: ĐH Quốc tế Miền Đông, Đường Nam Kỳ Khởi Nghĩa, Hòa Phú, Thủ Dầu Một, Bình Dương.</h5>
+      <img width="100%" src="/assets/img/maps/EventSiteMap.jpg" alt="">
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="title">
+    <h1>LỊCH TRÌNH VÀ BẢN ĐỒ</h1>
+</div>
+<div class="row">
+    <div class="col-sm-2 w3-bar-block w3-light-grey w3-card" style="width:130px;">
+        <h5 class="w3-bar-item">Menu</h5>
+        <button [class.active]="tabIndex == 1" class="w3-bar-item w3-button tablink" (click)="openFunction(1, 'timeline')">TIMELINE</button>
+        <button [class.active]="tabIndex == 2" class="w3-bar-item w3-button tablink" (click)="openFunction(2, 'maps-event')">BẢN ĐỒ SỰ
+            KIỆN</button>
+        <button [class.active]="tabIndex == 3" class="w3-bar-item w3-button tablink" (click)="openFunction(3, 'maps-run')">BẢN ĐỒ ĐƯỜNG
+            CHẠY</button>
+    </div>
+
+    <div class="col-sm-8" style="margin-left:100px">
+        <div id="timeline" class="w3-container function" style="display:block">
+            <h4>Thời gian: 1:00 pm – 8:30 pm</h4>
+            <h5>Địa điểm: ĐH Quốc tế Miền Đông, Đường Nam Kỳ Khởi Nghĩa, Hòa Phú, Thủ Dầu Một, Bình Dương.</h5>
+            <table>
+                <tr>
+                    <th>THỜI GIAN</th>
+                    <th>HOẠT ĐỘNG</th>
+                </tr>
+                <tr>
+                    <th class="time">1:00 PM</th>
+                    <th class="detail">Chào đón người tham dự</th>
+                </tr>
+                <tr>
+                    <th class="time">1:00 – 2:00 PM</th>
+                    <th class="detail">Khám phá các hoạt động tại lễ hộ</th>
+                </tr>
+                <tr>
+                    <th class="time">1:30 – 2:15 PM</th>
+                    <th class="detail">Tiết mục tài năng CMR</th>
+                </tr>
+                <tr>
+                    <th class="time">2:30 – 2:45 PM</th>
+                    <th class="detail">Tiết mục khởi động</th>
+                </tr>
+                <tr>
+                    <th class="time">2:45 – 3:00 PM</th>
+                    <th class="detail">Tập trung tại khu vực Xuất Phát</th>
+                </tr>
+                <tr>
+                    <th class="time">3:00 PM</th>
+                    <th class="detail">Xuất phát</th>
+                </tr>
+                <tr>
+                    <th class="time">5:00 PM – 5:15 PM</th>
+                    <th class="detail">Biểu diễn của DJ</th>
+                </tr>
+                <tr>
+                    <th class="time">5:15 PM – 5:30 PM</th>
+                    <th class="detail">Khoảnh khắc PRESS PAUSE</th>
+                </tr>
+                <tr>
+                    <th class="time">6:00 – 8:30 PM</th>
+                    <th class="detail">Biểu diễn của nghệ sĩ</th>
+                </tr>
+                <tr>
+                    <th class="time">8:30 PM</th>
+                    <th class="detail">Kết thúc</th>
+                </tr>
+            </table>
+            <p>* Lưu ý: Thông tin còn có thể thay đổi bởi BTC </p>
+        </div>
+
+        <div id="maps-event" class="w3-container function" style="display:none">
+            <img width="100%" src="/assets/img/maps/CMR19_Journey-Route.jpg" alt="">
+        </div>
+
+        <div id="maps-run" class="w3-container function" style="display:none">
+            <img width="100%" src="/assets/img/maps/EventSiteMap.jpg" alt="">
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="row" style="width: 100%">
+  <div class="col-sm-2">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-sm-10">
+    <div style="padding-left: 5%">
+      <div style="width: 95%;">
+        <input [(ngModel)]="searchText" placeholder="Search.." class="form-control">
+      </div>
+      <div class="row">
+        <div [ngStyle]="edit ? {'display': 'block'} : {'display': 'none'}" id="id01" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-teal">
+              <h2>Edit User</h2>
+            </header>
+            <div class="w3-container">
+              <div class="md-form">
+                <label for="username">Username</label>
+                <input [(ngModel)]="username" type="text" id="username" class="form-control" mdbInput>
+                <label for="email">Email</label>
+                <input [(ngModel)]="email" type="text" id="email" class="form-control" mdbInput>
+                <label for="password">Password</label>
+                <input [(ngModel)]="password" type="text" id="password" class="form-control" mdbInput>
+                <label for="mobile">Mobile</label>
+                <input [(ngModel)]="mobile" type="text" id="mobile" class="form-control" mdbInput>
+                <label for="role">Role</label>
+                <select id="role" type="text" placeholder="Role.." class="form-control" [(ngModel)]="role"
+                  mdbInputDirective>
+                  <option value="Admin">Admin</option>
+                  <option value="Editor">Editor</option>
+                  <option value="Volunteer">Volunteer</option>
+                </select>
+              </div>
+            </div>
+            <footer class="w3-container w3-teal">
+              <div style="margin-left: 40%">
+                <button (click)="onSave()" type="submit" class="btn btn-primary" mdbWavesEffect>Save</button>
+                <button (click)="onClose()" class="btn btn-outline-danger">Close</button>
+              </div>
+            </footer>
+          </div>
+        </div>
+        <div style="width: 95%;">
+          <table class="table table-dark table-striped">
+            <thead>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Mobile</th>
+              <th>Role</th>
+            </thead>
+            <ng-container *ngFor="let user of usersArray | grdFilter: {username: searchText, role:searchText};">
+              <tr>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.mobile}}</td>
+                <td>{{user.role}}</td>
+                <td>
+                  <button class="btn btn-outline-info" (click)="onEdit(user)">Edit</button>
+                  <button class="btn btn-outline-danger" (click)="onRemove(user)">Remove</button>
+                </td>
+              </tr>
+            </ng-container>
+
+          </table>
+          <div class="alert alert-danger" *ngIf="updateSuccessfull">
+            Updated successfully
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

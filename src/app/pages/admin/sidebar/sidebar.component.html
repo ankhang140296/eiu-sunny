@@ -1,0 +1,26 @@
+<div class="sidenav">
+  <div>
+    <h3 class="col-10" style="text-align: center; color: rgb(230, 197, 16)" class="dropdown-btn">Hi {{this.currentUser.role}}!
+      <i class="fa fa-caret-down"></i></h3>
+    <div class="dropdown-container">
+      <a style="text-align: center; font-size: 85%" href="/admin">Logout</a>
+    </div>
+  </div>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a *ngIf="this.currentUser.role === 'Admin' || this.currentUser.role === 'Volunteer'" routerLink="/tables">Tables</a>
+  <button class="dropdown-btn">User
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a *ngIf="this.currentUser.role === 'Admin'" routerLink="/user/add">Add User</a>
+    <a *ngIf="this.currentUser.role === 'Admin'" routerLink="/user/edit">Edit User</a>
+  </div>
+  <button class="dropdown-btn">Article
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a *ngIf="this.currentUser.role === 'Admin' || this.currentUser.role === 'Editor'" routerLink="/article/add">Add
+      Article</a>
+    <a routerLink="/article/edit">Edit Article</a>
+  </div>
+</div>

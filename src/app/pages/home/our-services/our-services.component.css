@@ -1,0 +1,151 @@
+/* Service
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .services-section{
+    background: url(src\assets\img\background2.jpg);
+    background-size: cover;
+    padding: 60px 0;
+  }
+  .inner-width{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .section-title{
+    text-align: center;
+    color: rgb(238, 255, 0);
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .border{
+    width: 160px;
+    height: 2px;
+    background: rgb(238, 255, 0);
+    margin: 40px auto;
+  }
+  .services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .service-box{
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    color: rgb(238, 255, 0);
+    cursor: pointer;
+  }
+  
+  .service-icon{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgb(238, 255, 0);
+    color: rgb(238, 255, 0);
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+    transition: 0.3s linear;
+  }
+  .service-icon i{
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+  }
+  .service-box:hover .service-icon{
+    background: #82ccdd;
+    color: rgb(238, 255, 0);
+  }
+  .service-title{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .service-desc{
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width:960px) {
+    .service-box{
+      max-width: 45%;
+    }
+  }
+  
+  @media screen and (max-width:768px) {
+    .service-box{
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (max-width:480px) {
+    .service-box{
+      max-width: 100%;
+    }
+  }
+  
+   */
+
+  .row{
+    margin: 0;
+    padding: 0;
+    background: url(/assets/img/background2.jpg) no-repeat;
+    background-size: cover;
+  }
+  .box{
+    width: 350px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    color: white;
+    font-family: 'Century Gothic',sans-serif;
+  }
+  .box-img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  .box h1{
+    font-size: 25px;
+    letter-spacing: 4px;
+    font-weight: 100;
+    color: rgb(229, 255, 0);
+    text-transform: uppercase;
+  }
+  .box h5{
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+  }
+  .box p{
+    text-align: justify;
+  }
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  .box li{
+    display: inline-block;
+    margin: 6px;
+    list-style: none;
+  }
+  .box li a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: all ease-in-out 250ms;
+  }
+  .box li a:hover{
+    color: #b9b9b9;
+  }
+  

@@ -1,0 +1,41 @@
+<div class="title">
+  <h1>TIN TỨC</h1>
+</div>
+<!-- Body -->
+<div class="row">
+  <div *ngFor="let article of articlesArray" class="leftcolumn">
+    <div class="card">
+      <h2 style="color: lightcoral;"><a href="">{{article.title}}</a></h2>
+      <h6 style="font-style: italic; font-size: 90%;">{{article.description}}</h6>
+      <h6 style="text-align: right; font-style: italic; font-size: 90%">{{article.date}}</h6>
+      <div>
+        <img src="{{article.contents[0].imageURL}}" alt="">
+      </div>
+      <a style="font-style: italic; font-size: 90%; color: mediumblue; text-align: right;" href="">Xem tiếp>>></a>
+    </div>
+  </div>
+
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Thông tin chương trình</h3>
+      <div class="fakeimg"><img style="height:150px;" src="/assets/img/Logo.jpg" alt="Logo"></div>
+      <p style="font-style: italic">Thời gian: 14/12/2019</p>
+      <p style="font-style: italic">Địa điểm: ĐH Quốc tế Miền Đông</p>
+    </div>
+    <div class="card">
+      <h3 style="padding-bottom: 10px">Bài viết phổ biến</h3>
+      <div *ngFor="let article of articlesArray">
+        <div class="card">
+          <a style="font-style: italic; font-size: 90%;" href="">{{article.title}}</a>
+          <img src="{{article.contents[0].imageURL}}" alt="">
+        </div>
+        <a style="font-style: italic; font-size: 90%; color: mediumblue; text-align: right;" href="">Xem tiếp>>></a>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+
+    </div>
+  </div>
+</div>
